@@ -1,0 +1,812 @@
+
+GET http://localhost:4000/api/practice/
+
+
+###
+GET http://localhost:4000/api/practice/5
+
+
+###
+GET http://localhost:4000/api/page/
+
+
+###
+POST http://localhost:4000/api/page/
+Content-Type: application/json;charset=UTF-8
+
+{
+  "id": 8,
+  "name": "Careers",
+  "route": "/careers",
+  "attributes": []
+},
+
+###
+GET http://localhost:4000/api/practice/1
+Content-Type: application/json;charset=UTF-8
+Set-Cookie: session=MTUzOTE4NjE1NnxOd3dBTkVjMVNrMU1XVXRTVEZBM1QxVlRXRWhQUmtOVFVEYzJWMWN6V2tkVldrVkVXREpZVHpOSVJGbE9Ta3hCU0VWWFExWXpOVkU9fGTgqa3L9I2HMp1u-Q6KIrpb7Kd8D_FJdj4AdkS5wyJ_; Path=/; Expires=Fri, 09 Nov 2018 15:42:36 GMT; Max-Age=2592000
+
+
+###
+POST http://localhost:4000/api/practice/
+Content-Type: application/json;charset=UTF-8
+Set-Cookie: session=MTUzOTE4NjE1NnxOd3dBTkVjMVNrMU1XVXRTVEZBM1QxVlRXRWhQUmtOVFVEYzJWMWN6V2tkVldrVkVXREpZVHpOSVJGbE9Ta3hCU0VWWFExWXpOVkU9fGTgqa3L9I2HMp1u-Q6KIrpb7Kd8D_FJdj4AdkS5wyJ_; Path=/; Expires=Fri, 09 Nov 2018 15:42:36 GMT; Max-Age=2592000
+
+{
+  "title": "zeem",
+  "description": "estate law",
+  "image": {
+	  "data": "data:image/png;base64,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",
+	  "name": "loco.png",
+	  "size": 3000
+  }
+}
+
+
+###
+POST http://localhost:4000/api/user/login
+Content-Type: application/json;charset=UTF-8
+Cookie: session=MTU1MDY2MTMxNnxOd3dBTkZRM1NVbFlTRk5DV1ZCWldFeEpTa1ZVV2xORlNFMUdTVlkzV0RkUU1qZExOVWRHVGxkV1RWTlJUVVJWU0VRMVZsSlBOMUU9fF2XybIehpEPpTwY2UqzsLHC7DX99TgabCzfEM_0NQuB; Path=/; Expires=Fri, 22 Mar 2019 11:15:16 GMT; Max-Age=2592000
+{
+	"user_name": "deled",
+	"password": "1234"
+}
+
+###
+POST http://localhost:4000/api/user/
+Content-Type: application/json; charset=UTF-8
+Set-Cookie: session=MTUzOTE4NjE1NnxOd3dBTkVjMVNrMU1XVXRTVEZBM1QxVlRXRWhQUmtOVFVEYzJWMWN6V2tkVldrVkVXREpZVHpOSVJGbE9Ta3hCU0VWWFExWXpOVkU9fGTgqa3L9I2HMp1u-Q6KIrpb7Kd8D_FJdj4AdkS5wyJ_; Path=/; Expires=Fri, 09 Nov 2018 15:42:36 GMT; Max-Age=2592000
+
+{
+	"role": 1,
+	"user_name": "dele2",
+	"first_name":"dele",
+	"middle_name": "dayo",
+	"surname": "dada",
+	"email": "dele@mailinator.com",
+	"title": "mr",
+	"password": "dele"
+}
+
+
+### get user list
+GET http://localhost:4000/api/user/
+Content-Type: application/json; charset=UTF-8
+Set-Cookie: session=MTUzOTY4OTE5NXxOd3dBTkVjMVNrMU1XVXRTVEZBM1QxVlRXRWhQUmtOVFVEYzJWMWN6V2tkVldrVkVXREpZVHpOSVJGbE9Ta3hCU0VWWFExWXpOVkU9fCa865UOEgi1A2a_Qg0eft2T42nZ03D9i3RBa70pEnJi; Path=/; Expires=Thu, 15 Nov 2018 11:26:35 GMT; Max-Age=2592000
+
+### get list of contact requests
+GET http://localhost:4000/api/person/
+Content-Type: application/json; charset=UTF-8Cookie: session=MTU1MDY2MTMxNnxOd3dBTkZRM1NVbFlTRk5DV1ZCWldFeEpTa1ZVV2xORlNFMUdTVlkzV0RkUU1qZExOVWRHVGxkV1RWTlJUVVJWU0VRMVZsSlBOMUU9fF2XybIehpEPpTwY2UqzsLHC7DX99TgabCzfEM_0NQuB; Path=/; Expires=Fri, 22 Mar 2019 11:15:16 GMT; Max-Age=2592000
+Set-Cookie: session=MTUzOTY4OTE5NXxOd3dBTkVjMCookie: session=MTU1MDY2MTMxNnxOd3dBTkZRM1NVbFlTRk5DV1ZCWldFeEpTa1ZVV2xORlNFMUdTVlkzV0RkUU1qZExOVWRHVGxkV1RWTlJUVVJWU0VRMVZsSlBOMUU9fF2XybIehpEPpTwY2UqzsLHC7DX99TgabCzfEM_0NQuB; Path=/; Expires=Fri, 22 Mar 2019 11:15:16 GMT; Max-Age=2592000QUmtOVFVEYzJWMWN6V2tkVldrVkVXREpZVHpOSVJGbE9Ta3hCU0VWWFExWXpOVkU9fCa865UOEgi1A2a_Qg0eft2T42nZ03D9i3RBa70pEnJi; Path=/; Expires=Thu, 15 Nov 2018 11:26:35 GMT; Max-Age=2592000
+
+
+###
+POST http://localhost:4000/api/person/
+Content-Type: application/json;charset=UTF-8
+Set-Cookie: session=MTUzODk5MTcwMnxOd3dBTkVjMVNrMU1XVXRTVEZBM1QxVlRXRWhQUmtOVFVEYzJWMWN6V2tkVldrVkVXREpZVHpOSVJGbE9Ta3hCU0VWWFExWXpOVkU9fFmRtLrUQpwlqFMC3fKyACzEXWwxRekm_aERIUMM5M_4; Path=/; Expires=Wed, 07 Nov 2018 09:41:42 GMT; Max-Age=2592000
+
+{
+	"role": 1,
+	"user_name": "dele2",
+	"first_name":"dele",
+	"middle_name": "dayo",
+	"surname": "dada",
+	"title": "mr",
+	"email": "dele@mailinator.com",
+	"phone": "123412341234",
+	"image": "dele.png",
+	"practice_id": [1,2,3],
+	"education": "bsc bobo",
+	"membership": "senior bobo",
+	"background": "bobo master"
+}
+
+###
+GET http://localhost:4000/api/person/1
+
+
+###
+POST http://localhost:4000/api/contact/
+Content-Type: application/json;charset=UTF-8
+Set-Cookie: session=MTUzODk5MTcwMnxOd3dBTkVjMVNrMU1XVXRTVEZBM1QxVlRXRWhQUmtOVFVEYzJWMWN6V2tkVldrVkVXREpZVHpOSVJGbE9Ta3hCU0VWWFExWXpOVkU9fFmRtLrUQpwlqFMC3fKyACzEXWwxRekm_aERIUMM5M_4; Path=/; Expires=Wed, 07 Nov 2018 09:41:42 GMT; Max-Age=2592000
+
+{
+	"name": "nwa",
+	"email": "dele@mailinator.com",
+	"subject": "123412341234",
+	"image": "dele.png",
+	"message": "I yungry!!"
+}
+
+###
+GET http://localhost:4000/api/contact/1
+
+
+###
+GET http://localhost:4000/api/contact/
+
+
+###
+
+POST http://localhost:4000/api/page/
+Content-Type: application/json;charset=UTF-8
+Set-Cookie: session=MTUzOTE4NjE1NnxOd3dBTkVjMVNrMU1XVXRTVEZBM1QxVlRXRWhQUmtOVFVEYzJWMWN6V2tkVldrVkVXREpZVHpOSVJGbE9Ta3hCU0VWWFExWXpOVkU9fGTgqa3L9I2HMp1u-Q6KIrpb7Kd8D_FJdj4AdkS5wyJ_; Path=/; Expires=Fri, 09 Nov 2018 15:42:36 GMT; Max-Age=2592000
+
+{
+  "id": 9,
+  "name": "Careers",
+  "route": "/careers",
+  "attributes": {
+    "images": {
+      "banner_image": {
+        "data": "data:image/png;base64,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",
+        "name": "careersbanner.png",
+        "size": 1118047
+      },
+      "content_image": {
+        "data": "data:image/png;base64,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",
+        "name": "careersimg.png",
+        "size": 412601
+      }
+    },
+    "content": "<p>The mission of our firm is to provide our clients with the highest level of personal and professional service for their legal needs.</p><p>Working for Sofunde, Osakwe, Ogundipe &amp; Belgore means you will be part of a dynamic, imaginative and innovative team in which each person’s contribution is highly valued.We welcome applications from qualified lawyers and non-legal practitioners that share our values.</p><p>Please send your CV and a covering letter to&nbsp;</p><p><strong style='color: rgb(54, 54, 54);'>careers@sooblaw.com</strong></p>",
+    "header": "Careers"
+  }
+}
+
+
+###
+DELETE http://localhost:4000/api/role/99
+Set-Cookie: session=MTUzOTE4NjE1NnxOd3dBTkVjMVNrMU1XVXRTVEZBM1QxVlRXRWhQUmtOVFVEYzJWMWN6V2tkVldrVkVXREpZVHpOSVJGbE9Ta3hCU0VWWFExWXpOVkU9fGTgqa3L9I2HMp1u-Q6KIrpb7Kd8D_FJdj4AdkS5wyJ_; Path=/; Expires=Fri, 09 Nov 2018 15:42:36 GMT; Max-Age=2592000
+
+###
+
+GET http://localhost:4000/api/snippets/script/
+
+
+###
+GET http://localhost:4000/api/snippets/script/1
+
+
+###
+POST http://localhost:4000/api/snippets/script/
+Content-Type: application/json;charset=UTF-8
+
+{
+  "src": "Coding Lessons Dummy",
+  "async": true,
+  "defer": false,
+  "innerHTML": "<p>Hello VueJs Dummy</p>"
+}
+
+###
+POST http://localhost:4000/api/snippets/script/1
+Content-Type: application/json;charset=UTF-8
+Cookie: session=MTU1MDY2MTMxNnxOd3dBTkZRM1NVbFlTRk5DV1ZCWldFeEpTa1ZVV2xORlNFMUdTVlkzV0RkUU1qZExOVWRHVGxkV1RWTlJUVVJWU0VRMVZsSlBOMUU9fF2XybIehpEPpTwY2UqzsLHC7DX99TgabCzfEM_0NQuB; Path=/; Expires=Fri, 22 Mar 2019 11:15:16 GMT; Max-Age=2592000
+
+{
+  "src": "Coding Lessons and Tutorials",
+  "async": true,
+  "defer": false,
+  "innerHTML": "<p>Hello VueJS and Java world</p>"
+}
+
+###
+DELETE http://localhost:4000/api/snippets/script/1
+Content-Type: application/json;charset=UTF-8
+Cookie: session=MTU1MDY2MTMxNnxOd3dBTkZRM1NVbFlTRk5DV1ZCWldFeEpTa1ZVV2xORlNFMUdTVlkzV0RkUU1qZExOVWRHVGxkV1RWTlJUVVJWU0VRMVZsSlBOMUU9fF2XybIehpEPpTwY2UqzsLHC7DX99TgabCzfEM_0NQuB; Path=/; Expires=Fri, 22 Mar 2019 11:15:16 GMT; Max-Age=2592000
+
+
+
+########################
+# PAGES SECTION
+###
+GET http://localhost:4000/api/page/list
+
+###
+GET http://localhost:4000/api/page/1
+
+###
+POST http://localhost:4000/api/page/1
+Content-Type: application/json;charset=UTF-8
+
+{
+  "id": 1,
+  "name": "Careers",
+  "route": "/careers",
+  "attributes": {
+      "carousel": [
+        {
+          "image": {
+            "data": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=",
+            "name": "libmarathon.jpg",
+            "size" : 100661
+          }
+        },
+        {
+          "image": {
+          "data": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=",
+          "name": "bg.1.jpg",
+          "size" : 203032
+          }
+        }
+      ],
+      "leaders": [
+        {
+          "image": {
+            "data": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=",
+            "name": "libmarathon.jpg",
+            "size" : 100667
+          }
+        },
+        {
+          "image": {
+          "data": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=",
+          "name": "bg.1.jpg",
+          "size" : 203037
+          }
+        }
+      ]
+  }
+}
+
+
+###
+POST http://localhost:4000/api/page/1
+Content-Type: application/json;charset=UTF-8
+
+{
+  "id": 1,
+  "name": "Careers",
+  "route": "/careers",
+  "attributes": {
+      "carousel": [
+        {
+          "image": {
+            "data": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=",
+            "name": "libmarathon.jpg",
+            "size" : 100661
+          }
+        },
+        {
+          "image": {
+          "data": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=",
+          "name": "bg.1.jpg",
+          "size" : 203032
+          }
+        }
+      ]
+  }
+}
+
+###
+POST http://localhost:4000/api/page/1
+Content-Type: application/json;charset=UTF-8
+
+{
+  "id": 1,
+  "name": "Careers",
+  "route": "/careers",
+  "attributes": {
+      "leaders": [
+        {
+          "image": {
+            "data": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=",
+            "name": "libmarathon.jpg",
+            "size" : 100667
+          }
+        },
+        {
+          "image": {
+          "data": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=",
+          "name": "bg.1.jpg",
+          "size" : 203037
+          }
+        }
+      ]
+  }
+}
+
+###
+POST http://localhost:4000/api/page/8
+Content-Type: application/json;charset=UTF-8
+
+{
+  "name": "All-Careers ",
+  "route": "/all-careers",
+  "attributes": {}
+}
+###
+DELETE http://localhost:4000/api/page/8
+
+###
+
+
+########################
+# PRESENTER SECTION
+###
+GET http://localhost:4000/api/presenter?page=0&offset=0
+
+###
+GET http://localhost:4000/api/presenter/count
+
+###
+GET http://localhost:4000/api/presenter/1
+
+###
+POST http://localhost:4000/api/presenter/3
+Content-Type: application/json;charset=UTF-8
+Cookie: session=MTU1NDM5MDM1M3xOd3dBTkVwUFVWSTFValZRTWxwRVdrRk9VbEZDU0VWT1ZVcFVUMDgzU0ZFelFVdExWamRPVVZKRVdrSTNVek5LTTFOQlNrVlhORkU9fNvumbmyyywaJir1PF3dixJCsADU-kAurhcf9iy-RgbX; Path=/; Expires=Sat, 04 May 2019 15:05:53 GMT; Max-Age=2592000
+
+{
+  "image": {},
+  "name": "Donatello Jaguar",
+  "email": "donnyjames@mailinator.com",
+  "description": "Sports Analyst Expert",
+  "status": 1
+}
+###
+POST http://localhost:4000/api/presenter/4
+Content-Type: application/json;charset=UTF-8
+Cookie: session=MTU1NDM5MDM1M3xOd3dBTkVwUFVWSTFValZRTWxwRVdrRk9VbEZDU0VWT1ZVcFVUMDgzU0ZFelFVdExWamRPVVZKRVdrSTNVek5LTTFOQlNrVlhORkU9fNvumbmyyywaJir1PF3dixJCsADU-kAurhcf9iy-RgbX; Path=/; Expires=Sat, 04 May 2019 15:05:53 GMT; Max-Age=2592000
+
+{
+  "image": {},
+  "name": "Babba Jake",
+  "email": "drakejake@mailinator.com",
+  "description": "Inspirational Analyst",
+  "status": 1
+}
+###
+POST http://localhost:4000/api/presenter/1
+Content-Type: application/json;charset=UTF-8
+Cookie: session=MTU1MzA5NTg4N3xOd3dBTkZoS05VRmFTa00yVlVnelQwbE1VRVpWVkVZeU5rbE1XRVJFUlZOVlVrbEZXRU5UV1VVMFRqVmFOMVpEUVZFelJrTkxTVkU9fCvuZn0k-nd8odMIRUM5OGBkI25UTDz4NPHP2ySsSKxj; Path=/; Expires=Fri, 19 Apr 2019 15:31:27 GMT; Max-Age=2592000
+
+{
+  "image": {},
+  "name": "Donnatelo James",
+  "email": "donny_james@mailinator.com",
+  "description": "Sports Analyst Expert"
+}
+###
+DELETE http://localhost:4000/api/presenter/1
+
+###
+
+
+########################
+# NEWS SECTION
+###
+GET http://localhost:4000/api/news?page=0&offset=0
+
+###
+GET http://localhost:4000/api/news/count
+
+###
+GET http://localhost:4000/api/news/1
+
+###
+POST http://localhost:4000/api/news
+Content-Type: application/json;charset=UTF-8
+
+{
+  "title": "Tennage Ninja Mutant 4",
+  "image": {"data": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=",
+            "name": "libmarathon.jpg",
+            "size" : 100661},
+  "date": "2019-02-28T10:40:55Z",
+  "author": "Raphael James",
+  "content": "Cartoon analyst Expert has spoken on the release of TNMT"
+}
+
+###
+POST http://localhost:4000/api/news/2
+Content-Type: application/json;charset=UTF-8
+
+{
+  "title": "Tennage Ninja Mutant 3",
+  "image": {},
+  "date": "2019-02-28T10:44:55Z",
+  "author": "Raphaelo James",
+  "content": "Cartoon analyst Expert has spoken on the release of TNMT"
+}
+###
+DELETE http://localhost:4000/api/news/1
+###
+
+
+########################
+# SCHEDULE SECTION
+###
+GET http://localhost:4000/api/schedule?page=1&offset=15&day=1
+Cookie: session=MTU1MzA5NTg4N3xOd3dBTkZoS05VRmFTa00yVlVnelQwbE1VRVpWVkVZeU5rbE1XRVJFUlZOVlVrbEZXRU5UV1VVMFRqVmFOMVpEUVZFelJrTkxTVkU9fCvuZn0k-nd8odMIRUM5OGBkI25UTDz4NPHP2ySsSKxj; Path=/; Expires=Fri, 19 Apr 2019 15:31:27 GMT; Max-Age=2592000
+
+###
+GET http://localhost:4000/api/schedule/count
+
+
+###
+GET http://localhost:4000/api/schedule/?presenterid=1
+Cookie: session=MTU1MzA5NTg4N3xOd3dBTkZoS05VRmFTa00yVlVnelQwbE1VRVpWVkVZeU5rbE1XRVJFUlZOVlVrbEZXRU5UV1VVMFRqVmFOMVpEUVZFelJrTkxTVkU9fCvuZn0k-nd8odMIRUM5OGBkI25UTDz4NPHP2ySsSKxj; Path=/; Expires=Fri, 19 Apr 2019 15:31:27 GMT; Max-Age=2592000
+
+
+###
+GET http://localhost:4000/api/schedule/filter?day=2
+Cookie: session=MTU1MzA5NTg4N3xOd3dBTkZoS05VRmFTa00yVlVnelQwbE1VRVpWVkVZeU5rbE1XRVJFUlZOVlVrbEZXRU5UV1VVMFRqVmFOMVpEUVZFelJrTkxTVkU9fCvuZn0k-nd8odMIRUM5OGBkI25UTDz4NPHP2ySsSKxj; Path=/; Expires=Fri, 19 Apr 2019 15:31:27 GMT; Max-Age=2592000
+
+
+###
+GET http://localhost:4000/api/schedule/1
+Cookie: session=MTU1MTM2MTY2MnxOd3dBTkVGVVVGRTBWMU5GTkU5VFVVOVJORk0xU1VVMFNFUXpWRXBDVWs1SU5WbFlXVlJhTWpaS05WRkpXbGRNUlZwSk0xWllSVUU9fPjF02TUV_4qUYuvrlQl0zhBq628dhE22wQ1i2u_lZVA; Path=/; Expires=Sat, 30 Mar 2019 13:47:42 GMT; Max-Age=2592000
+
+###
+
+POST http://localhost:4000/api/schedule
+Content-Type: application/json;charset=UTF-8
+Cookie: session=MTU1MzA5NTg4N3xOd3dBTkZoS05VRmFTa00yVlVnelQwbE1VRVpWVkVZeU5rbE1XRVJFUlZOVlVrbEZXRU5UV1VVMFRqVmFOMVpEUVZFelJrTkxTVkU9fCvuZn0k-nd8odMIRUM5OGBkI25UTDz4NPHP2ySsSKxj; Path=/; Expires=Fri, 19 Apr 2019 15:31:27 GMT; Max-Age=2592000
+
+{
+  "title": "Avenger 4 EndGame",
+  "presenter_id": 1,
+  "day": 4,
+  "start_time": "1970-02-02T09:47:00Z",
+  "end_time": "1970-02-02T10:47:55Z",
+  "content": "Movie analyst Expert has spoken on the release of Avengers 4 "
+}
+###
+POST http://localhost:4000/api/schedule
+Content-Type: application/json;charset=UTF-8
+Cookie: session=MTU1MzA5NTg4N3xOd3dBTkZoS05VRmFTa00yVlVnelQwbE1VRVpWVkVZeU5rbE1XRVJFUlZOVlVrbEZXRU5UV1VVMFRqVmFOMVpEUVZFelJrTkxTVkU9fCvuZn0k-nd8odMIRUM5OGBkI25UTDz4NPHP2ySsSKxj; Path=/; Expires=Fri, 19 Apr 2019 15:31:27 GMT; Max-Age=2592000
+
+{
+  "title": "Teenage Ninja Mutant 4",
+  "presenter_id": 1,
+  "copresenter_id": 2,
+  "day": 4,
+  "start_time": "1970-02-02T12:32:00Z",
+  "end_time": "1970-02-02T13:47:00Z",
+  "content": "Cartoon analyst Expert has spoken on the release of TNMT and the spoliers"
+}
+###
+POST http://localhost:4000/api/schedule
+Content-Type: application/json;charset=UTF-8
+Cookie: session=MTU1MzA5NTg4N3xOd3dBTkZoS05VRmFTa00yVlVnelQwbE1VRVpWVkVZeU5rbE1XRVJFUlZOVlVrbEZXRU5UV1VVMFRqVmFOMVpEUVZFelJrTkxTVkU9fCvuZn0k-nd8odMIRUM5OGBkI25UTDz4NPHP2ySsSKxj; Path=/; Expires=Fri, 19 Apr 2019 15:31:27 GMT; Max-Age=2592000
+
+{
+  "title": "Captain Marvel Begins",
+  "presenter_id": 2,
+  "copresenter_id": 1,
+  "day": 4,
+  "start_time": "1970-02-02T13:47:55Z",
+  "end_time": "1970-02-02T15:47:00Z",
+  "content": "Movie analyst Expert has spoken on the release of Captain Marvel and the spoliers"
+}
+
+
+###
+POST http://localhost:4000/api/schedule
+Content-Type: application/json;charset=UTF-8
+Cookie: session=MTU1MzA5NTg4N3xOd3dBTkZoS05VRmFTa00yVlVnelQwbE1VRVpWVkVZeU5rbE1XRVJFUlZOVlVrbEZXRU5UV1VVMFRqVmFOMVpEUVZFelJrTkxTVkU9fCvuZn0k-nd8odMIRUM5OGBkI25UTDz4NPHP2ySsSKxj; Path=/; Expires=Fri, 19 Apr 2019 15:31:27 GMT; Max-Age=2592000
+
+{
+  "title": "Shazam",
+  "presenter_id": 2,
+  "copresenter_id": 1,
+  "day": 4,
+  "start_time": "1970-02-02T19:50:55Z",
+  "end_time": "1970-02-02T20:47:00Z",
+  "content": "Movie analyst Expert has spoken on the release of Shazam and the spoliers"
+}
+###
+POST http://localhost:4000/api/schedule/1
+Content-Type: application/json;charset=UTF-8
+Cookie: session=MTU1MzA5NTg4N3xOd3dBTkZoS05VRmFTa00yVlVnelQwbE1VRVpWVkVZeU5rbE1XRVJFUlZOVlVrbEZXRU5UV1VVMFRqVmFOMVpEUVZFelJrTkxTVkU9fCvuZn0k-nd8odMIRUM5OGBkI25UTDz4NPHP2ySsSKxj; Path=/; Expires=Fri, 19 Apr 2019 15:31:27 GMT; Max-Age=2592000
+
+{
+  "title": "Avenger 4 EndGame",
+  "presenter_id": 2,
+  "day": 4,
+  "start_time": "1970-02-02T06:49:55Z",
+  "end_time": "1970-02-02T07:49:55Z",
+  "content": "Cartoon analyst Expert has spoken on the release of TNMT 4 and the spoliers"
+}
+###
+
+DELETE http://localhost:4000/api/schedule/4
+Cookie: session=MTU1MzA5NTg4N3xOd3dBTkZoS05VRmFTa00yVlVnelQwbE1VRVpWVkVZeU5rbE1XRVJFUlZOVlVrbEZXRU5UV1VVMFRqVmFOMVpEUVZFelJrTkxTVkU9fCvuZn0k-nd8odMIRUM5OGBkI25UTDz4NPHP2ySsSKxj; Path=/; Expires=Fri, 19 Apr 2019 15:31:27 GMT; Max-Age=2592000
+
+###
+GET http://localhost:4000/api/schedule/live?day=4&time=16:27:11
+Cookie: session=MTU1MzA5NTg4N3xOd3dBTkZoS05VRmFTa00yVlVnelQwbE1VRVpWVkVZeU5rbE1XRVJFUlZOVlVrbEZXRU5UV1VVMFRqVmFOMVpEUVZFelJrTkxTVkU9fCvuZn0k-nd8odMIRUM5OGBkI25UTDz4NPHP2ySsSKxj; Path=/; Expires=Fri, 19 Apr 2019 15:31:27 GMT; Max-Age=2592000
+###
+GET http://localhost:4000/api/schedule/summary?day=5&time=11:29:00
+Cookie: session=MTU1MzA5NTg4N3xOd3dBTkZoS05VRmFTa00yVlVnelQwbE1VRVpWVkVZeU5rbE1XRVJFUlZOVlVrbEZXRU5UV1VVMFRqVmFOMVpEUVZFelJrTkxTVkU9fCvuZn0k-nd8odMIRUM5OGBkI25UTDz4NPHP2ySsSKxj; Path=/; Expires=Fri, 19 Apr 2019 15:31:27 GMT; Max-Age=2592000
+###
+GET http://localhost:4000/api/schedule/all?day=3
+Cookie: session=MTU1MzA5NTg4N3xOd3dBTkZoS05VRmFTa00yVlVnelQwbE1VRVpWVkVZeU5rbE1XRVJFUlZOVlVrbEZXRU5UV1VVMFRqVmFOMVpEUVZFelJrTkxTVkU9fCvuZn0k-nd8odMIRUM5OGBkI25UTDz4NPHP2ySsSKxj; Path=/; Expires=Fri, 19 Apr 2019 15:31:27 GMT; Max-Age=2592000
+###
+
+########################
+# GALLERY SECTION
+###
+GET http://localhost:4000/api/gallery?page=2
+
+###
+GET http://localhost:4000/api/gallery/count
+
+###
+GET http://localhost:4000/api/gallery/1
+
+###
+POST http://localhost:4000/api/gallery
+Content-Type: application/json;charset=UTF-8
+
+{
+  "id": 1,
+  "image": {}
+}
+###
+POST http://localhost:4000/api/gallery/1
+Content-Type: application/json;charset=UTF-8
+
+{
+  "image": {}
+}
+###
+DELETE http://localhost:4000/api/gallery/1
+###
+
+
+########################
+# MUSIC SECTION
+###
+POST http://localhost:4000/api/music/upload
+
+###
+GET http://localhost:4000/api/music
+Cookie: session=MTU1MzA5NTg4N3xOd3dBTkZoS05VRmFTa00yVlVnelQwbE1VRVpWVkVZeU5rbE1XRVJFUlZOVlVrbEZXRU5UV1VVMFRqVmFOMVpEUVZFelJrTkxTVkU9fCvuZn0k-nd8odMIRUM5OGBkI25UTDz4NPHP2ySsSKxj; Path=/; Expires=Fri, 19 Apr 2019 15:31:27 GMT; Max-Age=2592000
+
+###
+GET http://localhost:4000/api/music/1
+Cookie: session=MTU1MTM2MTY2MnxOd3dBTkVGVVVGRTBWMU5GTkU5VFVVOVJORk0xU1VVMFNFUXpWRXBDVWs1SU5WbFlXVlJhTWpaS05WRkpXbGRNUlZwSk0xWllSVUU9fPjF02TUV_4qUYuvrlQl0zhBq628dhE22wQ1i2u_lZVA; Path=/; Expires=Sat, 30 Mar 2019 13:47:42 GMT; Max-Age=2592000
+
+###
+POST http://localhost:4000/api/music
+Content-Type: application/json;charset=UTF-8
+Cookie: session=MTU1MTM2MTY2MnxOd3dBTkVGVVVGRTBWMU5GTkU5VFVVOVJORk0xU1VVMFNFUXpWRXBDVWs1SU5WbFlXVlJhTWpaS05WRkpXbGRNUlZwSk0xWllSVUU9fPjF02TUV_4qUYuvrlQl0zhBq628dhE22wQ1i2u_lZVA; Path=/; Expires=Sat, 30 Mar 2019 13:47:42 GMT; Max-Age=2592000
+
+{
+  "id": 1,
+  "title": "God is Good",
+  "artist": "Don Moen",
+  "music_file": {
+                  "id": 1,
+                  "path": "/public/Oe5Ji4I9WZkhym1zIGzo.mp3",
+                  "size": 1860380
+              },
+  "rank": 1,
+  "upload_id": 1
+}
+###
+POST http://localhost:4000/api/music/1
+Content-Type: application/json;charset=UTF-8
+
+{
+  "id": 1,
+  "title": "God is very Good",
+  "artist": "Don Moen",
+  "music_file": {},
+  "rank": 1
+}
+###
+
+DELETE http://localhost:4000/api/music/1
+Cookie: session=MTU1MTM2MTY2MnxOd3dBTkVGVVVGRTBWMU5GTkU5VFVVOVJORk0xU1VVMFNFUXpWRXBDVWs1SU5WbFlXVlJhTWpaS05WRkpXbGRNUlZwSk0xWllSVUU9fPjF02TUV_4qUYuvrlQl0zhBq628dhE22wQ1i2u_lZVA; Path=/; Expires=Sat, 30 Mar 2019 13:47:42 GMT; Max-Age=2592000
+
+###
+
+
+########################
+# EVENT SECTION
+###
+GET http://localhost:4000/api/event?page=1&offset=15
+Cookie: session=MTU1MTM2MTY2MnxOd3dBTkVGVVVGRTBWMU5GTkU5VFVVOVJORk0xU1VVMFNFUXpWRXBDVWs1SU5WbFlXVlJhTWpaS05WRkpXbGRNUlZwSk0xWllSVUU9fPjF02TUV_4qUYuvrlQl0zhBq628dhE22wQ1i2u_lZVA; Path=/; Expires=Sat, 30 Mar 2019 13:47:42 GMT; Max-Age=2592000
+
+###
+GET http://localhost:4000/api/event/count
+
+###
+GET http://localhost:4000/api/event/1
+Cookie: session=MTU1MTM2MTY2MnxOd3dBTkVGVVVGRTBWMU5GTkU5VFVVOVJORk0xU1VVMFNFUXpWRXBDVWs1SU5WbFlXVlJhTWpaS05WRkpXbGRNUlZwSk0xWllSVUU9fPjF02TUV_4qUYuvrlQl0zhBq628dhE22wQ1i2u_lZVA; Path=/; Expires=Sat, 30 Mar 2019 13:47:42 GMT; Max-Age=2592000
+
+###
+
+POST http://localhost:4000/api/event
+Content-Type: application/json;charset=UTF-8
+Cookie: session=MTU1MTM2MTY2MnxOd3dBTkVGVVVGRTBWMU5GTkU5VFVVOVJORk0xU1VVMFNFUXpWRXBDVWs1SU5WbFlXVlJhTWpaS05WRkpXbGRNUlZwSk0xWllSVUU9fPjF02TUV_4qUYuvrlQl0zhBq628dhE22wQ1i2u_lZVA; Path=/; Expires=Sat, 30 Mar 2019 13:47:42 GMT; Max-Age=2592000
+
+{
+  "id": 1,
+  "title": "Google Golang",
+  "venue": "Sillicon Valley, wherever",
+  "status": 1,
+  "date": "2019-03-07T11:49:55Z",
+  "link": "http://google.com"
+}
+
+###
+
+POST http://localhost:4000/api/event
+Content-Type: application/json;charset=UTF-8
+Cookie: session=MTU1MTM2MTY2MnxOd3dBTkVGVVVGRTBWMU5GTkU5VFVVOVJORk0xU1VVMFNFUXpWRXBDVWs1SU5WbFlXVlJhTWpaS05WRkpXbGRNUlZwSk0xWllSVUU9fPjF02TUV_4qUYuvrlQl0zhBq628dhE22wQ1i2u_lZVA; Path=/; Expires=Sat, 30 Mar 2019 13:47:42 GMT; Max-Age=2592000
+
+{
+  "id": 2,
+  "title": "Oracle Java",
+  "venue": "Sillicon Valley, wherever",
+  "status": 1,
+  "date": "2019-03-07T12:49:55Z",
+  "link": "http://oracle.com"
+}
+
+###
+
+POST http://localhost:4000/api/event
+Content-Type: application/json;charset=UTF-8
+Cookie: session=MTU1MTM2MTY2MnxOd3dBTkVGVVVGRTBWMU5GTkU5VFVVOVJORk0xU1VVMFNFUXpWRXBDVWs1SU5WbFlXVlJhTWpaS05WRkpXbGRNUlZwSk0xWllSVUU9fPjF02TUV_4qUYuvrlQl0zhBq628dhE22wQ1i2u_lZVA; Path=/; Expires=Sat, 30 Mar 2019 13:47:42 GMT; Max-Age=2592000
+
+{
+  "id": 3,
+  "title": "Google Python",
+  "venue": "Sillicon Valley, wherever",
+  "status": 1,
+  "date": "2019-03-07T20:49:55Z",
+  "link": "http://google.com"
+}
+
+###
+POST http://localhost:4000/api/event/1
+Content-Type: application/json;charset=UTF-8
+
+{
+  "id": 1,
+  "title": "Google Golang Language",
+  "venue": "Sillicon Valley, wherever, USA",
+  "status": 1,
+  "date": "2019-02-28T10:49:55Z",
+  "link": "http://google.org"
+}
+
+###
+DELETE http://localhost:4000/api/event/1
+###
+GET http://localhost:4000/api/event/live
+
+###
+GET http://localhost:4000/api/event/others
+
+###
+
+
+
+########################
+# CONTACT SECTION
+###
+GET http://localhost:4000/api/contact?page=1&offset=15
+
+###
+
+GET http://localhost:4000/api/contact/count
+
+###
+GET http://localhost:4000/api/contact/1
+
+###
+
+POST http://localhost:4000/api/contact
+Content-Type: application/json;charset=UTF-8
+
+{
+  "name": "Bill Gates",
+  "email": "billgates@microsoft.com",
+  "subject": "Letter of Employment as Software Developer",
+  "date": "2019-02-28T10:49:55Z",
+  "message": "Hello Henry Erabor, You have been employed as software developer in Microsoft. Congratulations!"
+}
+
+###
+
+POST http://localhost:4000/api/contact/1
+Content-Type: application/json;charset=UTF-8
+
+{
+  "id": 1,
+  "name": "Bill Gates",
+  "email": "billgates@microsoft.com",
+  "subject": "Letter of Employment as Senior Software Developer",
+  "date": "2019-02-28T10:49:55Z",
+  "message": "Hello Henry Erabor, You have been employed as a senior software developer in Microsoft. Congratulations!"
+}
+
+###
+
+DELETE http://localhost:4000/api/contact/1
+
+###
+
+
+########################
+# USER SECTION
+###
+GET http://localhost:4000/api/user/list
+Cookie: session=MTU1MTM2MTY2MnxOd3dBTkVGVVVGRTBWMU5GTkU5VFVVOVJORk0xU1VVMFNFUXpWRXBDVWs1SU5WbFlXVlJhTWpaS05WRkpXbGRNUlZwSk0xWllSVUU9fPjF02TUV_4qUYuvrlQl0zhBq628dhE22wQ1i2u_lZVA; Path=/; Expires=Sat, 30 Mar 2019 13:47:42 GMT; Max-Age=2592000
+
+###
+GET http://localhost:4000/api/user/1
+Cookie: session=MTU1MTM2MTY2MnxOd3dBTkVGVVVGRTBWMU5GTkU5VFVVOVJORk0xU1VVMFNFUXpWRXBDVWs1SU5WbFlXVlJhTWpaS05WRkpXbGRNUlZwSk0xWllSVUU9fPjF02TUV_4qUYuvrlQl0zhBq628dhE22wQ1i2u_lZVA; Path=/; Expires=Sat, 30 Mar 2019 13:47:42 GMT; Max-Age=2592000
+
+###
+POST http://localhost:4000/api/user
+Content-Type: application/json;charset=UTF-8
+Cookie: session=MTU1MTM2MTY2MnxOd3dBTkVGVVVGRTBWMU5GTkU5VFVVOVJORk0xU1VVMFNFUXpWRXBDVWs1SU5WbFlXVlJhTWpaS05WRkpXbGRNUlZwSk0xWllSVUU9fPjF02TUV_4qUYuvrlQl0zhBq628dhE22wQ1i2u_lZVA; Path=/; Expires=Sat, 30 Mar 2019 13:47:42 GMT; Max-Age=2592000
+
+{
+  "id": 2,
+  "role": 2,
+  "user_name": "chrishems",
+  "first_name": "Chris",
+  "middle_name": "Jack",
+  "surname": "Hemsworth",
+  "email": "chrishemsworth@mailinator.com"
+}
+
+###
+
+POST http://localhost:4000/api/user/2
+Content-Type: application/json;charset=UTF-8
+Cookie: session=MTU1MTM2MTY2MnxOd3dBTkVGVVVGRTBWMU5GTkU5VFVVOVJORk0xU1VVMFNFUXpWRXBDVWs1SU5WbFlXVlJhTWpaS05WRkpXbGRNUlZwSk0xWllSVUU9fPjF02TUV_4qUYuvrlQl0zhBq628dhE22wQ1i2u_lZVA; Path=/; Expires=Sat, 30 Mar 2019 13:47:42 GMT; Max-Age=2592000
+
+{
+  "role": 2,
+  "user_name": "chrishems007",
+  "first_name": "Chris",
+  "middle_name": "Jacky",
+  "surname": "Hemsworth",
+  "email": "chrishemsworth@mailinator.com",
+  "title": "mr",
+	"password": "secret"
+}
+
+###
+DELETE http://localhost:4000/api/user/2
+Cookie: session=MTU1MTM2MTY2MnxOd3dBTkVGVVVGRTBWMU5GTkU5VFVVOVJORk0xU1VVMFNFUXpWRXBDVWs1SU5WbFlXVlJhTWpaS05WRkpXbGRNUlZwSk0xWllSVUU9fPjF02TUV_4qUYuvrlQl0zhBq628dhE22wQ1i2u_lZVA; Path=/; Expires=Sat, 30 Mar 2019 13:47:42 GMT; Max-Age=2592000
+
+###
+
+POST http://localhost:4000/api/user/login
+Content-Type: application/json;charset=UTF-8
+
+{
+	"user_name": "deled",
+	"password": "1234"
+}
+
+###
+GET http://localhost:4000/api/user/logout
+###
+
+########################
+# SETTINGS SECTION
+###
+GET http://localhost:4000/api/settings
+Content-Type: application/json;charset=UTF-8
+Cookie: session=MTU1MjkzMDAxOHxOd3dBTkZoS05VRmFTa00yVlVnelQwbE1VRVpWVkVZeU5rbE1XRVJFUlZOVlVrbEZXRU5UV1VVMFRqVmFOMVpEUVZFelJrTkxTVkU9fOz4r_nteRq_8uB2VVtLXhotmtl3uvc0GzOTNFTNG1IG; Path=/; Expires=Wed, 17 Apr 2019 17:26:58 GMT; Max-Age=2592000
+
+###
+POST http://localhost:4000/api/settings
+Content-Type: application/json;charset=UTF-8
+Cookie: session=MTU1MjkzMDAxOHxOd3dBTkZoS05VRmFTa00yVlVnelQwbE1VRVpWVkVZeU5rbE1XRVJFUlZOVlVrbEZXRU5UV1VVMFRqVmFOMVpEUVZFelJrTkxTVkU9fOz4r_nteRq_8uB2VVtLXhotmtl3uvc0GzOTNFTNG1IG; Path=/; Expires=Wed, 17 Apr 2019 17:26:58 GMT; Max-Age=2592000
+
+{
+  "stream_url" : "GGSYGhherggdkjhskdssssssssssjhdgYYYYYYYYYYYYYYRRRRRRRRR"
+}
